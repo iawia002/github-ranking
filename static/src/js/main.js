@@ -97,7 +97,7 @@ var RepoList = React.createClass({
 });
 
 // https://api.github.com/search/repositories?q=javascript&per_page=50&sort=stars 
-var languages=['All','JavaScript','Python','Ruby', 'Html', 'CSS', 'C', 'C++', 'Java', 'Go', 'C#', 'Scala'];
+var languages=['All', 'JavaScript', 'Html', 'CSS', 'Python', 'Ruby', 'Perl', 'C', 'C++', 'C#', 'Java', 'Scala', 'Go', 'Objective-C', 'Swift', 'CoffeeScript'];
 var github_api_url = 'https://api.github.com/search/repositories?per_page=50&sort=stars&q='
 ReactDOM.render(
 	<Header languages={languages} url={github_api_url}/>,
