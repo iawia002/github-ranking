@@ -1,0 +1,83 @@
+* { 
+	margin: 0px;
+}
+body, html {
+	font-family: "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", "\5FAE\8F6F\96C5\9ED1", sans-serif, tahoma, arial !important;
+	letter-spacing: 0.5px;
+	padding: 0;
+	margin: 0;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover {
+	color: #e53935;
+}
+#content {
+	margin: 0;
+	padding: 0;
+}
+.header {
+	background: #e53935; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #e53935 , #e35d5b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #e53935 , #e35d5b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: #ffffff;
+	padding: 50px 20px 10px 20px;
+	text-align: center;
+}
+.header h1 {
+	padding-bottom: 50px;
+}
+.header ul {
+	text-align: center;
+	width: auto;
+	padding: 0;
+	list-style-type: none;
+	font-size: 18px;
+}
+.header li {
+	display: inline;
+	padding: 0px 10px;
+}
+.header a {
+	color: #ffffff;
+}
+.header a:hover {
+	padding-bottom: 5px;
+	border-bottom: 2px solid #ffffff;
+}
+
+.list {
+	padding: 20px;
+}
+.list div {
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 20px; 
+}
+.list li {
+	width: 80%;
+	float: left;
+	list-style-type: none;
+}
+.list img {
+	width: 20%;
+	float: left;
+}
+.list p {
+	padding-left: 20px;
+}
+.tag {
+	background: #e35d5b;
+	color: #ffffff;
+	display: inline-block;
+	padding: 5px 10px;
+	border: none;
+	margin-left: 10px;
+}
+.star {
+	color: #e35d5b;
+}
