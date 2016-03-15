@@ -82,7 +82,7 @@ var RepoList = React.createClass({
 						<a href={repo.html_url} target="_blank"><img src={repo.owner.avatar_url} /></a>
 						<li>
 							<p>
-								<a href={repo.html_url} target="_blank">{repo.name}</a> (<i className="fa fa-star star"></i> {repo.stargazers_count} <i className="fa fa-code-fork"></i> {repo.forks_count}) {repo.language ? <span className="tag">{repo.language}</span> : ''} <br/><br/> {repo.description}
+								<a href={repo.html_url} target="_blank">{repo.name}</a> (<i className="fa fa-star"></i>{repo.stargazers_count}  <i className="fa fa-code-fork"></i>{repo.forks_count}) {repo.language ? <span className="tag">{repo.language}</span> : ''} <br/><br/> {repo.description}
 							</p>
 						</li>
 					</div>
