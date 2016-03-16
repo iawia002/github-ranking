@@ -112,7 +112,10 @@ var RepoList = React.createClass({
 			);
 		} else {
 			var repos = this.state.data.items;
-			var repoList = repos.map(function (repo) {
+			var r = repos.sort(function (a, b) {
+				return b.stargazers_count + b.forks_count - (a.stargazers_count + a.forks_count);
+			});
+			var repoList = r.map(function (repo, i) {
 				return React.createElement(
 					'div',
 					null,
@@ -127,6 +130,8 @@ var RepoList = React.createClass({
 						React.createElement(
 							'p',
 							null,
+							i + 1,
+							'.',
 							React.createElement(
 								'a',
 								{ href: repo.html_url, target: '_blank' },
@@ -138,6 +143,11 @@ var RepoList = React.createClass({
 							'  ',
 							React.createElement('i', { className: 'fa fa-code-fork' }),
 							repo.forks_count,
+							'  ',
+							React.createElement('i', { className: 'fa fa-star' }),
+							'+',
+							React.createElement('i', { className: 'fa fa-code-fork' }),
+							repo.stargazers_count + repo.forks_count,
 							') ',
 							repo.language ? React.createElement(
 								'span',

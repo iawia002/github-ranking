@@ -84,13 +84,16 @@ var RepoList = React.createClass({
 		}
 		else {
 			var repos = this.state.data.items;
-			var repoList = repos.map(function (repo) {
+			var r = repos.sort(function(a, b){
+				return (b.stargazers_count + b.forks_count) - (a.stargazers_count + a.forks_count)
+			});
+			var repoList = r.map(function (repo, i) {
 				return (
 					<div>
 						<a href={repo.html_url} target="_blank"><img src={repo.owner.avatar_url} /></a>
 						<li>
 							<p>
-								<a href={repo.html_url} target="_blank">{repo.name}</a> (<i className="fa fa-star"></i>{repo.stargazers_count}&nbsp;&nbsp;<i className="fa fa-code-fork"></i>{repo.forks_count}) {repo.language ? <span className="tag">{repo.language}</span> : ''} <br/><br/> {repo.description}
+								{i+1}.<a href={repo.html_url} target="_blank">{repo.name}</a> (<i className="fa fa-star"></i>{repo.stargazers_count}&nbsp;&nbsp;<i className="fa fa-code-fork"></i>{repo.forks_count}&nbsp;&nbsp;<i className="fa fa-star"></i>+<i className="fa fa-code-fork"></i>{repo.stargazers_count + repo.forks_count}) {repo.language ? <span className="tag">{repo.language}</span> : ''} <br/><br/> {repo.description}
 							</p>
 						</li>
 					</div>
