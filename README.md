@@ -1,5 +1,5 @@
 # Github Ranking - top 50 projects in Github
-![screenshots](https://github.com/iawia002/github-ranking/raw/master/screenshots/2.png)
+![screenshots](https://github.com/iawia002/github-ranking/raw/master/screenshots/3.png)
 It's just a project for fun.(I was always curious about which project get most stars in Github)
 
 ***
