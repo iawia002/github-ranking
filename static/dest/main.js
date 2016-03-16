@@ -97,16 +97,17 @@ var RepoList = React.createClass({
 	render: function render() {
 		if (this.state.loading) {
 			return React.createElement(
-				'span',
-				null,
+				'div',
+				{ className: 'loading' },
 				React.createElement('i', { className: 'fa fa-spinner fa-spin' }),
 				' Loading...'
 			);
 		} else if (this.state.error !== null) {
 			return React.createElement(
-				'span',
-				null,
-				'Error: ',
+				'div',
+				{ className: 'loading' },
+				React.createElement('i', { 'class': 'fa fa-exclamation' }),
+				' Error: ',
 				this.state.error.message
 			);
 		} else {
@@ -163,6 +164,6 @@ var RepoList = React.createClass({
 });
 
 // https://api.github.com/search/repositories?q=javascript&per_page=50&sort=stars
-var languages = ['All', 'JavaScript', 'Html', 'CSS', 'Python', 'Ruby', 'Perl', 'C', 'C++', 'C#', 'Java', 'Scala', 'Go', 'Objective-C', 'Swift', 'CoffeeScript'];
+var languages = ['All', 'JavaScript', 'Html', 'CSS', 'Python', 'Ruby', 'Perl', 'Lua', 'C', 'C++', 'C#', 'Java', 'Scala', 'Go', 'Objective-C', 'Swift', 'CoffeeScript', 'PHP'];
 var github_api_url = 'https://api.github.com/search/repositories?per_page=50&sort=stars&q=';
 ReactDOM.render(React.createElement(Header, { languages: languages, url: github_api_url }), document.getElementById('content'));

@@ -28,18 +28,20 @@ a:hover {
 	text-align: center;
 }
 .header h1 {
-	padding-bottom: 50px;
+	font-size: 40px;
+	padding-bottom: 40px;
 }
 .header ul {
-	text-align: center;
+	overflow: hidden;
 	width: auto;
 	padding: 0;
 	list-style-type: none;
 	font-size: 18px;
 }
 .header li {
-	display: inline;
-	padding: 0px 10px;
+	float: left;
+	padding: 0px;
+	margin: 5px 10px;
 }
 .header a {
 	color: #ffffff;
@@ -80,4 +82,14 @@ a:hover {
 }
 .star {
 	color: #e35d5b;
+}
+.loading {
+	text-align: center;
+	font-size: 19px;
+}
+
+#footer {
+	font-size: 17px;
+	padding: 40px 0px 20px 0px;
+	text-align: center;
 }
